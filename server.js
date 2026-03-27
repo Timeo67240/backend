@@ -20,3 +20,14 @@ app.use('/api/dashboard', require('./routes/dashboard'));
 app.get('/api/health', (req, res) => res.json({ status: 'ok', app: 'Pacifique RP - OPJ API' }));
 
 app.listen(PORT, () => console.log(`[Server] Pacifique RP OPJ API running on port ${PORT}`));
+// Route API
+app.get("/api/test", (req, res) => {
+    res.json({ message: "API opérationnelle !" });
+});
+
+// Toujours en dernier !
+app.listen(PORT, () => {
+    console.log(`[Server] Pacifique RP OPJ API running on port ${PORT}`);
+});
+
+
